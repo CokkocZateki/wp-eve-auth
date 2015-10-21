@@ -7,8 +7,10 @@
  * 
  */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' ); // If file is called directly, die
-
-if (is_admin()){    // Check user is admin
+/*
+ * If user is admin
+ */
+if (is_admin()){    
     add_action('admin_menu', 'wp_eve_auth_admin_menu');
     function wp_eve_auth_admin_menu(){ // Create menu elements
         add_menu_page( 'EVE Auth','EVE Auth', 'administrator', 'eve_auth', 'eve_auth_admin_page');

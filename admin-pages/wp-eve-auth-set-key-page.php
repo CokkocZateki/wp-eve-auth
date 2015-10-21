@@ -1,7 +1,8 @@
 <?php
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' ); // If file is called directly, die
+
 /*
- * The set corp key page.
+ * The set key page.
  * We will use the corp key to get the corp data that all users will be compared to.
  */
 function eve_auth_set_key(){
