@@ -17,8 +17,17 @@ if (is_admin()){
         add_submenu_page('eve_auth', 'Summary', 'Summary', 'administrator', 'eve_auth_summary', 'eve_auth_summary_page');
         add_submenu_page('eve_auth', 'Set Corp Key', 'Set Corp Key', 'administrator', 'eve_auth_setkey', 'eve_auth_set_key');
     }
+    /*
+     * Load the api object class
+     */
+    include_once('api/wp_eve_auth_api.php'); 
+    /*
+     * Instantation
+     */
+    $api = new wp_eve_auth_api();
+    
+    include_once('admin-pages/wp-eve-auth-admin-page.php');     // The main admin page
+    include_once('admin-pages/wp-eve-auth-summary-page.php');   // The summary page
+    include_once('admin-pages/wp-eve-auth-set-key-page.php');   // The set key page
 }
 
-include_once('admin-pages/wp-eve-auth-admin-page.php');     // The main admin page
-include_once('admin-pages/wp-eve-auth-summary-page.php');   // The summary page
-include_once('admin-pages/wp-eve-auth-set-key-page.php');   // The set key page

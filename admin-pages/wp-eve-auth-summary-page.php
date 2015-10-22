@@ -11,15 +11,15 @@ function eve_auth_summary_page(){
     <table>
         <tr>
             <td align="right"> Alliance Name: </td>
-            <td><?php get_option('alliance_name'); ?> </td>
+            <td><?php _e(get_option('alliance_name')); ?> </td>
         </tr>
         <tr>
             <td align="right"> Alliance ID: </td>
-            <td> <?php get_option('alliance_id'); ?> </td>
+            <td> <?php _e(get_option('alliance_id')); ?> </td>
         </tr>
         <tr>
             <td align="right"> Ticker: </td>
-            <td> <?php get_option('alliance_ticker'); ?> </td>
+            <td> <?php _e(get_option('alliance_ticker')); ?> </td>
         </tr>
     </table>
     
@@ -27,15 +27,15 @@ function eve_auth_summary_page(){
     <table>
         <tr>
             <td align="right"> Corporation Name: </td>
-            <td> <?php get_option('corp_name'); ?> </td>
+            <td> <?php _e(get_option('corp_name')); ?> </td>
         </tr>
         <tr>
             <td align="right"> Corporation ID: </td>
-            <td> <?php get_option('corp_id'); ?> </td>
+            <td> <?php _e(get_option('corp_id')); ?> </td>
         </tr>
         <tr>
             <td align="right"> Ticker: </td>
-            <td> <?php get_option('corp_ticker'); ?> </td>
+            <td> <?php _e(get_option('corp_ticker')); ?> </td>
         </tr>
     </table>
     <?php 
