@@ -7,6 +7,17 @@ function eve_auth_summary_page(){
 ?>
 <h2>EVE API Auth - Summary</h2>
 <?php if(corpSet()){ ?>
+    <h3> API Key </h3>
+    <table>
+        <tr>
+            <td align="right"> VCode: </td>
+            <td><?php _e(get_option('corp_vcode')); ?> </td>
+        </tr>
+        <tr>
+            <td align="right"> Key ID: </td>
+            <td> <?php _e(get_option('corp_key_id')); ?> </td>
+        </tr>
+    </table>
     <h3> Alliance Info </h3>
     <table>
         <tr>

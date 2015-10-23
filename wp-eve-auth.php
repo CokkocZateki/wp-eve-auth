@@ -9,13 +9,16 @@ Author URI: http://vooders.com
 License: GPL
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' ); // If file is called directly, die
-
-/* Includes */
+/* 
+ * Includes 
+ */
 include('wp-eve-auth-options.php'); // The admin page code
 include('wp-eve-auth-db.php'); // The db functions
 include('wp-eve-auth-reg-form.php');// The registration form changes
 
-/* Register Hooks */
+/*
+ *  Register Hooks 
+ */
 register_activation_hook(__FILE__, 'wp_eve_auth_activate'); 
 register_deactivation_hook(__FILE__, 'wp_eve_auth_deactivate');  
 
@@ -25,7 +28,9 @@ register_deactivation_hook(__FILE__, 'wp_eve_auth_deactivate');
  * Used to setup the database
  */
 function wp_eve_auth_activate(){    
-    /* Add custom options */
+    /* 
+     * Add custom options 
+     */
     // Corp API key
     add_option('corp_vcode', 'Not Set', '', 'yes');
     add_option('corp_key_id', 'Not Set', '', 'yes');
@@ -37,7 +42,9 @@ function wp_eve_auth_activate(){
     add_option('alliance_name', 'Not Set', '', 'yes');
     add_option('alliance_id', 'Not Set', '', 'yes');
     add_option('alliance_ticker', 'Not Set', '', 'yes');
-    /* Add custom columns to */
+    /* 
+     * Add custom columns to existing tables 
+     */
     add_col('vcode', 'users', '0'); // Add the vcode column in the users table
     add_col('key_id', 'users', '0');// Adds the key id column in the users table
 }

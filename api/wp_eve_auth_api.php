@@ -13,8 +13,7 @@
  */
 class wp_eve_auth_api {
     private $uri_prefix = 'https://api.eveonline.com';
-    
-    
+       
     public function get_corp_sheet($vcode, $key_id){
         $url = $this->uri_prefix . '/corp/CorporationSheet.xml.aspx';
         $myvars = 'vcode=' . $vcode . '&keyID=' . $key_id;
@@ -31,7 +30,5 @@ class wp_eve_auth_api {
         $corp_sheet = new SimpleXMLElement($response);
         
         return $corp_sheet;         
-    }
-    
-    
+    }    
 }

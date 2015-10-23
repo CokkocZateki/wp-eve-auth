@@ -3,21 +3,21 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' ); // If file is called
 /* Create new form elements */
 add_action( 'register_form', 'wp_eve_auth_reg_form' );
 function wp_eve_auth_reg_form() {
-$vcode = ( ! empty( $_POST['vcode'] ) ) ? trim( $_POST['vcode'] ) : '';
-$key_id = ( ! empty( $_POST['key_id'] ) ) ? trim( $_POST['key_id'] ) : '';
+    $vcode = ( ! empty( $_POST['vcode'] ) ) ? trim( $_POST['vcode'] ) : '';
+    $key_id = ( ! empty( $_POST['key_id'] ) ) ? trim( $_POST['key_id'] ) : '';
 
-?>
-<p>
-    Include an API key to auth for this site.
-</p>
-<p>
-    <label for="vcode"><?php _e( 'vcode', 'eve_auth' ) ?><br />
-        <input type="text" name="vcode" id="vcode" class="input" value="<?php echo esc_attr( wp_unslash( $vcode ) ); ?>" size="50" /></label>
-        <br/>
-    <label for="key_id"><?php _e( 'key_id', 'eve_auth' ) ?><br />
-        <input type="text" name="key_id" id="key_id" class="input" value="<?php echo esc_attr( wp_unslash( $key_id ) ); ?>" size="50" /></label>
-</p>
-<?php
+    ?>
+    <p>
+        Include an API key to auth for this site.
+    </p>
+    <p>
+        <label for="vcode"><?php _e( 'vcode', 'eve_auth' ) ?><br />
+            <input type="text" name="vcode" id="vcode" class="input" value="<?php echo esc_attr( wp_unslash( $vcode ) ); ?>" size="50" /></label>
+            <br/>
+        <label for="key_id"><?php _e( 'key_id', 'eve_auth' ) ?><br />
+            <input type="text" name="key_id" id="key_id" class="input" value="<?php echo esc_attr( wp_unslash( $key_id ) ); ?>" size="50" /></label>
+    </p>
+    <?php
 }
 
 /* Add validation. */
